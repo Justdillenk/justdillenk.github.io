@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects · Dillen Koranteng</title>
-<meta name="description" content="Embedded systems and hardware projects by Dillen Koranteng.">
+<title>About · Dillen Koranteng</title>
+<meta name="description" content="About Dillen Koranteng — ECE student at UNC Charlotte.">
 <meta name="theme-color" content="#0b0d0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
   <div class="wrap">
     <a href="index.html" class="logo">Dillen.Koranteng</a>
     <div class="navlinks">
-      <a href="projects.html" class="navlink active"><span class="num">01</span>Projects</a>
+      <a href="projects.html" class="navlink"><span class="num">01</span>Projects</a>
       <a href="experience.html" class="navlink"><span class="num">02</span>Experience</a>
-      <a href="about.html" class="navlink"><span class="num">03</span>About</a>
+      <a href="about.html" class="navlink active"><span class="num">03</span>About</a>
       <a href="index.html#contact" class="cta">Get in touch</a>
     </div>
   </div>
@@ -28,141 +28,71 @@
 <header class="page-head">
   <div class="wrap">
     <a href="index.html" class="back-link">← Back home</a>
-    <div class="page-eyebrow">Selected work</div>
-    <h1 class="page-title">Things I've built with my hands.</h1>
+    <div class="page-eyebrow">About</div>
+    <h1 class="page-title">Off the clock.</h1>
     <p class="page-sub">
-      Every project here started as a rabbit hole — a part I wanted to understand, or a problem
-      that only made sense to solve with hardware. Write-ups below cover what each one does,
-      how it's built, and what I'd change next time.
+      The short version: an ECE student who likes building things that talk back. The longer
+      version is below.
     </p>
   </div>
 </header>
 
 <main>
-<section id="esp32-minecraft-alarm" style="padding-top:70px;">
+<section style="padding-top:70px;">
   <div class="wrap">
-    <article class="project-article">
-      <div class="project-meta">
-        <span class="work-status"><span class="dot"></span>Documented on GitHub</span>
-        <div class="project-year">2026</div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View on GitHub →</a>
-        </div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>
+          I'm <strong>Dillen</strong> — a sophomore studying Electrical &amp; Computer Engineering
+          at <strong>UNC Charlotte</strong>, based in the Concord, NC area. I'm focused on embedded
+          systems, and most of my free time outside of class goes toward hands-on hardware projects
+          that push that further.
+        </p>
+        <p>
+          It started with basic Arduino LED projects and MicroPython on a Raspberry Pi Pico, and
+          has grown into full builds like an ESP32-based alarm system and a hardware reaction
+          timer. I document all of it on GitHub, partly as a portfolio and partly because writing
+          things down makes me actually understand them.
+        </p>
+        <p>
+          Outside of engineering, I work part-time as an instructor at Code Ninjas, teaching kids
+          coding fundamentals — it's turned out to sharpen how I explain technical ideas just as
+          much as any class has.
+        </p>
       </div>
-      <div>
-        <h3 class="project-title">ESP32 Minecraft Damage Alarm</h3>
-        <div class="project-body">
-          <p>
-            <strong>The idea:</strong> take an in-game event — my character taking damage in Minecraft —
-            and make it physically real. Every hit registers as a real alarm going off next to me, not
-            just a red flash on screen.
-          </p>
-          <p class="project-sub">How it works</p>
-          <p>
-            A Python script connects to the Minecraft server over <strong>RCON</strong> and polls for
-            damage/health-change events on my player. When it detects a hit, it sends a signal over
-            Wi-Fi to an <strong>ESP32</strong>, which is wired to a buzzer and LED. The ESP32 runs a
-            small listener that triggers the alarm the moment it receives the packet, so the delay
-            between an in-game hit and the real-world alarm is close to instant.
-          </p>
-          <p class="project-sub">Why it was interesting</p>
-          <p>
-            This was my first project bridging software running somewhere else (a game server) with
-            a microcontroller reacting in real time. It forced me to think about networking on the
-            ESP32 side and reliability — what happens if a packet drops, or the connection resets
-            mid-session — rather than just wiring up a sensor and reading a pin.
-          </p>
-          <p class="project-sub">What's next</p>
-          <p>
-            I'd like to extend it to react to different event types (fall damage vs. mob damage vs.
-            explosions) with different alarm patterns, and eventually move the alert logic onto the
-            ESP32 itself so it doesn't depend on the Python bridge staying alive.
-          </p>
-          <div class="project-tags">
-            <span class="ptag">ESP32</span>
-            <span class="ptag">Python</span>
-            <span class="ptag">RCON</span>
-            <span class="ptag">Wi-Fi</span>
-          </div>
-        </div>
+      <div class="fact-list">
+        <div class="fact"><span class="k">LOCATION</span><span class="v">Concord, NC</span></div>
+        <div class="fact"><span class="k">SCHOOL</span><span class="v">UNC Charlotte</span></div>
+        <div class="fact"><span class="k">MAJOR</span><span class="v">ECE / CE</span></div>
+        <div class="fact"><span class="k">GRAD</span><span class="v">May 2029</span></div>
+        <div class="fact"><span class="k">FOCUS</span><span class="v">Embedded Systems</span></div>
       </div>
-    </article>
+    </div>
   </div>
 </section>
 
-<section id="reaction-time-game">
+<section>
   <div class="wrap">
-    <article class="project-article">
-      <div class="project-meta">
-        <span class="work-status"><span class="dot"></span>Documented on GitHub</span>
-        <div class="project-year">2026</div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">View on GitHub →</a>
-        </div>
-      </div>
+    <div class="sec-header">
       <div>
-        <h3 class="project-title">Reaction Time Game</h3>
-        <div class="project-body">
-          <p>
-            <strong>The idea:</strong> a standalone hardware reflex tester — no laptop required.
-            Press a button as fast as you can after a light comes on, and see your time in
-            milliseconds on a physical display.
-          </p>
-          <p class="project-sub">How it works</p>
-          <p>
-            Built on an <strong>Arduino Mega 2560</strong>. A microcontroller-driven timer starts
-            on a randomized delay, lights an LED, and begins counting. A button press stops the
-            clock, and the result is written out to a <strong>4-digit 7-segment display</strong>
-            in real time. LEDs give visual feedback for "too early" versus a valid reaction.
-          </p>
-          <p class="project-sub">Why it was interesting</p>
-          <p>
-            This project was really about timing precision and display driving — getting the
-            7-segment display to update cleanly without flicker, and making sure the randomized
-            delay couldn't be gamed by guessing the pattern. It was my first real exercise in
-            reading and reacting to hardware inputs on a tight timing budget.
-          </p>
-          <div class="project-tags">
-            <span class="ptag">Arduino Mega 2560</span>
-            <span class="ptag">7-Segment Display</span>
-            <span class="ptag">C++</span>
-          </div>
-        </div>
+        <div class="sec-eyebrow">Interests</div>
+        <h2 class="sec-title">What I'm into.</h2>
       </div>
-    </article>
-  </div>
-</section>
-
-<section id="next-build">
-  <div class="wrap">
-    <article class="project-article">
-      <div class="project-meta">
-        <span class="work-status"><span class="dot"></span>In progress</span>
-        <div class="project-year">Now</div>
-        <div class="project-links">
-          <a href="#" target="_blank" rel="noopener">Follow along on GitHub →</a>
-        </div>
+    </div>
+    <div class="interest-grid">
+      <div class="interest">
+        <h3>Embedded hardware</h3>
+        <p>Arduino, ESP32, and Raspberry Pi Pico projects — the thing I'd be doing even if it weren't for school.</p>
       </div>
-      <div>
-        <h3 class="project-title">Next build</h3>
-        <div class="project-body">
-          <p>
-            Currently learning <strong>KiCad</strong> to move from breadboard prototypes to real,
-            manufacturable PCBs. The goal is to take one of my existing breadboard builds and
-            redesign it as a proper board — schematic capture, footprint selection, and layout
-            done from scratch.
-          </p>
-          <p>
-            More detail goes up here as the build takes shape — check GitHub in the meantime for
-            work-in-progress notes.
-          </p>
-          <div class="project-tags">
-            <span class="ptag">KiCad</span>
-            <span class="ptag">PCB Design</span>
-          </div>
-        </div>
+      <div class="interest">
+        <h3>Teaching</h3>
+        <p>Currently a Code Ninjas instructor — I like explaining technical ideas until they actually click.</p>
       </div>
-    </article>
+      <div class="interest">
+        <h3>PCB design</h3>
+        <p>Currently learning KiCad to take my breadboard projects to real, manufacturable boards.</p>
+      </div>
+    </div>
   </div>
 </section>
 </main>
